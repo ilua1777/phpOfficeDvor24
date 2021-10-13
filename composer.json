@@ -1,0 +1,72 @@
+{
+    "name": "phpofficedvor24/phpword",
+    "description": "Library PHPWord for site cloud.dvor24.com",
+    "keywords": [
+        "cloud.dvor24.com"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ilya Ivanov",
+            "email": "back@dvor24.ru"
+        }
+    ],
+    "scripts": {
+        "test": [
+            "phpunit --color=always"
+        ],
+        "test-no-coverage": [
+            "phpunit --color=always --no-coverage"
+        ],
+        "check": [
+            "php-cs-fixer fix --ansi --dry-run --diff",
+            "phpcs --report-width=200 --report-summary --report-full samples/ src/ tests/ --ignore=src/PhpWord/Shared/PCLZip --standard=PSR2 -n",
+            "phpmd src/,tests/ text ./phpmd.xml.dist --exclude pclzip.lib.php",
+            "@test-no-coverage"
+        ],
+        "fix": [
+            "php-cs-fixer fix --ansi"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Runs all unit tests",
+        "test-no-coverage": "Runs all unit tests, without code coverage",
+        "check": "Runs PHP CheckStyle and PHP Mess detector",
+        "fix": "Fixes issues found by PHP-CS"
+    },
+    "require": {
+        "php": "^5.3.3 || ^7.0 || ^8.0",
+        "ext-xml": "*",
+        "laminas/laminas-escaper": "^2.2"
+    },
+    "require-dev": {
+        "ext-zip": "*",
+        "ext-gd": "*",
+        "phpunit/phpunit": "^4.8.36 || ^7.0",
+        "squizlabs/php_codesniffer": "^2.9 || ^3.5",
+        "friendsofphp/php-cs-fixer": "^2.2",
+        "phpmd/phpmd": "2.*",
+        "phploc/phploc": "2.* || 3.* || 4.* || 5.* || 6.* || 7.*",
+        "dompdf/dompdf":"0.8.* || 1.0.*",
+        "tecnickcom/tcpdf": "6.*",
+        "mpdf/mpdf": "5.7.4 || 6.* || 7.* || 8.*",
+        "php-coveralls/php-coveralls": "1.1.0 || ^2.0"
+    },
+    "suggest": {
+        "ext-zip": "Allows writing OOXML and ODF",
+        "ext-gd2": "Allows adding images",
+        "ext-xmlwriter": "Allows writing OOXML and ODF",
+        "ext-xsl": "Allows applying XSL style sheet to headers, to main document part, and to footers of an OOXML template",
+        "dompdf/dompdf": "Allows writing PDF"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpOffice\\PhpWord\\": "src/PhpWord"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.19-dev"
+        }
+    }
+}
