@@ -12111,6 +12111,11 @@ Search.appendIndex(
             "summary": "Returns\u0020true\u0020if\u0020string\u0020contains\u0020a\u0020macro\u0020that\u0020is\u0020not\u0020in\u0020it\u0027s\u0020own\u0020w\u003Ar",
             "url": "classes/PhpOffice-PhpWord-TemplateProcessor.html#method_textNeedsSplitting"
         },                {
+            "fqsen": "\\PhpOffice\\PhpWord\\TemplateProcessor\u003A\u003AaddTextAfterBody\u0028\u0029",
+            "name": "addTextAfterBody",
+            "summary": "",
+            "url": "classes/PhpOffice-PhpWord-TemplateProcessor.html#method_addTextAfterBody"
+        },                {
             "fqsen": "\\PhpOffice\\PhpWord\\TemplateProcessor\u003A\u003AMAXIMUM_REPLACEMENTS_DEFAULT",
             "name": "MAXIMUM_REPLACEMENTS_DEFAULT",
             "summary": "",
