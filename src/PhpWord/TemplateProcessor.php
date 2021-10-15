@@ -1317,4 +1317,13 @@ class TemplateProcessor
     {
         return preg_match('/[^>]\${|}[^<]/i', $text) == 1;
     }
+
+    public function addTextAfterBody($text,$to, $from = false)
+	{
+		$str = $this->tempDocumentMainPart;
+		if ($to) $str = str_replace('<w:body>', '<w:body><w:p w:rsidR="005F670F" w:rsidRDefault="005F79F5"><w:r><w:t>'.$text.'</w:t></w:r><w:bookmarkStart w:id="0" w:name="_GoBack"/><w:bookmarkEnd w:id="0"/></w:p>', $str);
+		if ($from)$str = str_replace('</w:body>', '<w:p w:rsidR="005F570F" w:rsidRDefault="005F79F5"><w:r><w:t>'.$text.'</w:t></w:r><w:bookmarkStart w:id="0" w:name="_GoBack"/><w:bookmarkEnd w:id="0"/></w:p></w:body>', $str);
+		$this->tempDocumentMainPart = $str;
+		return true;
+	}
 }
