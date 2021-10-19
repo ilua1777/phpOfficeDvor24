@@ -12116,6 +12116,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/PhpOffice-PhpWord-TemplateProcessor.html#method_addTextAfterBody"
         },                {
+            "fqsen": "\\PhpOffice\\PhpWord\\TemplateProcessor\u003A\u003AaddIndent\u0028\u0029",
+            "name": "addIndent",
+            "summary": "",
+            "url": "classes/PhpOffice-PhpWord-TemplateProcessor.html#method_addIndent"
+        },                {
             "fqsen": "\\PhpOffice\\PhpWord\\TemplateProcessor\u003A\u003AMAXIMUM_REPLACEMENTS_DEFAULT",
             "name": "MAXIMUM_REPLACEMENTS_DEFAULT",
             "summary": "",
