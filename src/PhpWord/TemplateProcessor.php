@@ -1326,4 +1326,18 @@ class TemplateProcessor
 		$this->tempDocumentMainPart = $str;
 		return true;
 	}
+
+    public function addIndent($right, $top){
+        $str = $this->tempDocumentMainPart;
+        $defaultRight = 1160;
+        $defaultTop = 1100;
+        if(!$right && !$top) return false;
+        if ($right != 0) $mmright = 57*$right;
+        else $mmright = 0;
+        if ($top != 0) $mmtop = 57*$top;
+        else $mmtop = 0;
+        $str = str_replace('<w:pgMar w:top="1100" w:right="1160" w:bottom="2020" w:left="1160" w:header="0" w:footer="1831" w:gutter="0"/>' ,'<w:pgMar w:top="'.$defaultTop+$mmtop.'" w:right="1160" w:bottom="2020" w:left="'.$defaultRight+$mmright.'" w:header="0" w:footer="1831" w:gutter="0"/>', $str);
+        $this->tempDocumentMainPart = $str;
+        return true;
+    }
 }
