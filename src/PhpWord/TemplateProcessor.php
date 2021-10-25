@@ -1342,4 +1342,11 @@ class TemplateProcessor
         $this->tempDocumentMainPart = $str;
         return true;
     }
+
+    public function deleteNonBlock(){
+		$str = $this->tempDocumentMainPart;
+		$str = str_replace('<w:p w:rsidR="00AE11E8" w:rsidRDefault="00AE11E8"><w:pPr><w:rPr><w:b/><w:bCs/><w:lang w:val="ru-RU"/></w:rPr></w:pPr><w:r><w:rPr><w:lang w:val="ru-RU"/></w:rPr><w:br w:type="page"/></w:r></w:p><w:p w:rsidR="00E53B96" w:rsidRPr="00E53B96" w:rsidRDefault="00E53B96" w:rsidP="00BB06DE"><w:pPr><w:pStyle w:val="a3"/><w:spacing w:before="94"/><w:rPr><w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Times New Roman"/><w:b w:val="0"/><w:bCs w:val="0"/><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Times New Roman"/><w:b w:val="0"/><w:bCs w:val="0"/><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr><w:t>deleteBlock</w:t></w:r><w:bookmarkStart w:id="0" w:name="_GoBack"/><w:bookmarkEnd w:id="0"/></w:p>', '', $str);
+		$this->tempDocumentMainPart = $str;
+		return true;
+	}
 }
