@@ -12121,6 +12121,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/PhpOffice-PhpWord-TemplateProcessor.html#method_addIndent"
         },                {
+            "fqsen": "\\PhpOffice\\PhpWord\\TemplateProcessor\u003A\u003AdeleteNonBlock\u0028\u0029",
+            "name": "deleteNonBlock",
+            "summary": "",
+            "url": "classes/PhpOffice-PhpWord-TemplateProcessor.html#method_deleteNonBlock"
+        },                {
             "fqsen": "\\PhpOffice\\PhpWord\\TemplateProcessor\u003A\u003AMAXIMUM_REPLACEMENTS_DEFAULT",
             "name": "MAXIMUM_REPLACEMENTS_DEFAULT",
             "summary": "",
